@@ -1,0 +1,29 @@
+Explain the difference between elif and multiple if statements.
+----> an if-elif chain executes only the first condition that evaluates to True and then skips the rest of the chain, while multiple independent if statements check every single condition, regardless of whether a previous one was true
+
+
+Give one example where:
+multiple if produces a different output than elif
+
+Clearly state:
+Input
+Output using if
+Output using elif
+Why the difference happens
+----> while checking if a number is "greater than 5" and "greater than 10."
+	with if statments
+	number = 15
+
+	if number > 5:
+	    print("Greater than 5")
+	if number > 10:
+	    print("Greater than 10")
+
+	with elif:
+	if number > 5:
+	    print("Greater than 5")
+	elif number > 10:
+	    print("Greater than 10")
+
+	With multiple if statements, these are treated as independent tests. The 	computer checks the first one (15 > 5), finds it true, and prints the result. It 	then checks the second one (15 > 10) separately, finds it also true, and prints 	that result as well.
+	The elif chain creates a mutually exclusive group. The computer starts at the 	top and looks for the first true condition. As soon as it finds one (15 > 5), it 	executes that block and skips everything else in that specific chain. Even 	though 15 is technically greater than 10, the computer never even checks that 	line because the first condition was already met.
